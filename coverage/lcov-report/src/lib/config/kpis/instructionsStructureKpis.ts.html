@@ -1,0 +1,439 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/lib/config/kpis/instructionsStructureKpis.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/lib/config/kpis</a> instructionsStructureKpis.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// src/lib/config/kpis/instructionsStructureKpis.ts
+import { KpiDefinition } from '@/lib/types/kpiEvaluation';
+&nbsp;
+import {
+  evaluateFormatStructureLogic,
+  evaluateTaskDecompositionLogic,
+  evaluateLengthConstraintsLogic,
+  evaluateExamplesPresenceLogic,
+  evaluateToneStyleKeywordsLogic,
+  evaluateIterativePotentialLogic
+} from '@/lib/agents/InstructionsStructureAgent'// Import from the agent file
+&nbsp;
+export const instructionsStructureKpiDefinitions: KpiDefinition[] = [
+  {
+    id: "format-structure",
+    key: "formatStructure",
+    name_pdd: "Format &amp; Structure", // PDD V2 KPI #5
+    description: "Evaluates if the prompt requests a specific output format (e.g., JSON, table) or has a clear, logical structure.",
+    category_key: "instructions_structure",
+    evaluation_type: "rule_based",
+    rule_based_logic_fn: evaluateFormatStructureLogic,
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: Output format is clearly specified, and/or the prompt structure is exceptionally organized." },
+      { minScore: 75, maxScore: 89, assignedScore: 80, assessmentComment: "Good: Output format guidance is present or the prompt structure is logical and easy to follow." },
+      { minScore: 50, maxScore: 74, assignedScore: 60, assessmentComment: "Fair: Some indication of desired format or structure, but could be more explicit or organized.", improvementSuggestions: ["Clearly specify the desired output format (e.g., 'Provide the output as a JSON object', 'Use bullet points for the list').", "Organize complex prompts into clear sections."] },
+      { minScore: 25, maxScore: 49, assignedScore: 30, assessmentComment: "Poor: Lacks clear instructions on output format and the prompt structure is disorganized.", improvementSuggestions: ["Define the output format explicitly.", "Use headings or distinct paragraphs for different parts of a complex prompt."] },
+      { minScore: 0, maxScore: 24, assignedScore: 10, assessmentComment: "Very Poor: No guidance on output format and the prompt structure is chaotic or missing." }
+    ],
+    default_weight_in_category: 0.25,
+    directly_impacts_output_vitals: ["Readability_Coherence", "Verbosity"],
+    associated_pdd_mistake_keys: ["IgnoringOutputFormatStructure", "PoorPromptStructure"]
+  },
+  {
+    id: "task-decomposition-steps",
+    key: "taskDecomposition",
+    name_pdd: "Task Decomposition (Steps)", // PDD V2 KPI #6
+    description: "Measures if complex requests are appropriately broken down into smaller, sequential steps or subtasks.",
+    category_key: "instructions_structure",
+    evaluation_type: "rule_based",
+    rule_based_logic_fn: evaluateTaskDecompositionLogic,
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: Complex tasks are clearly broken down into logical, manageable steps." },
+      { minScore: 75, maxScore: 89, assignedScore: 80, assessmentComment: "Good: Task decomposition is evident and mostly effective." },
+      { minScore: 50, maxScore: 74, assignedScore: 60, assessmentComment: "Fair: Some attempt at task breakdown, but steps could be clearer or more sequential.", improvementSuggestions: ["For multi-faceted requests, explicitly list each step or sub-task.", "Use numbering or sequencing words (e.g., 'First... then... finally...')."] },
+      { minScore: 25, maxScore: 49, assignedScore: 30, assessmentComment: "Poor: A complex task is presented as a single block without clear decomposition, risking confusion or missed steps by the AI.", improvementSuggestions: ["Break down the main request into smaller, distinct actions.", "Ensure each part of the request is clearly articulated."] },
+      { minScore: 0, maxScore: 24, assignedScore: 10, assessmentComment: "Very Poor: Multiple unrelated or complex tasks are overloaded into the prompt with no decomposition." }
+    ],
+    default_weight_in_category: 0.15,
+    directly_impacts_output_vitals: ["Readability_Coherence", "Accuracy_Correctness"],
+    associated_pdd_mistake_keys: ["OverloadingPrompts"]
+  },
+  {
+    id: "examples-few-shot-learning",
+    key: "examplePresence",
+    name_pdd: "Examples / Few-Shot Learning", // PDD V2 KPI #7
+    description: "Evaluates if relevant in-context examples (few-shot learning) are provided to guide the AI, especially for nuanced tasks or specific output styles.",
+    category_key: "instructions_structure",
+    evaluation_type: "rule_based",
+    rule_based_logic_fn: evaluateExamplesPresenceLogic,
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: High-quality, relevant examples are provided, effectively guiding the AI." },
+      { minScore: 60, maxScore: 89, assignedScore: 75, assessmentComment: "Good: Examples are present and likely helpful." },
+      { minScore: 0, maxScore: 59, assignedScore: 40, assessmentComment: "Needs Improvement: No examples provided. For complex, nuanced, or style-specific tasks, providing 1-3 examples can significantly improve AI performance.", improvementSuggestions: ["Include a clear example of the desired input/output format or style.", "For complex tasks, show the AI a simplified version of what you expect."] }
+    ],
+    default_weight_in_category: 0.20,
+    directly_impacts_output_vitals: ["Accuracy_Correctness", "Consistency", "Readability_Coherence"],
+    associated_pdd_mistake_keys: ["NotUsingExamples"]
+  },
+  {
+    id: "tone-style-creativity-guidance",
+    key: "structureCoherence",
+    name_pdd: "Tone / Style / Creativity Guidance", // PDD V2 KPI #8
+    description: "Assesses if instructions on the desired tone (e.g., formal, casual), style (e.g., academic, storytelling), or creativity level are included and clear.",
+    category_key: "instructions_structure",
+    evaluation_type: "hybrid",
+    rule_based_logic_fn: evaluateToneStyleKeywordsLogic,
+    ai_meta_prompt_template: "Rate the effectiveness (0-100) and clarity of the tone, style, and creativity guidance in this prompt. Is it sufficient for an AI to adopt the desired persona or approach? Explain. Prompt: {PROMPT_TEXT}",
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: Clear, specific, and effective guidance on tone, style, and/or creativity is provided." },
+      { minScore: 75, maxScore: 89, assignedScore: 80, assessmentComment: "Good: Guidance on tone/style/creativity is present and helpful." },
+      { minScore: 50, maxScore: 74, assignedScore: 60, assessmentComment: "Fair: Some attempt to guide tone/style/creativity, but it could be more explicit or consistent.", improvementSuggestions: ["Clearly state the desired tone (e.g., 'Write in a professional and formal tone', 'Use a friendly and conversational style').", "Specify the level of creativity if important (e.g., 'Be highly creative', 'Stick strictly to the facts')."] },
+      { minScore: 25, maxScore: 49, assignedScore: 30, assessmentComment: "Poor: Guidance on tone, style, or creativity is vague or minimal.", improvementSuggestions: ["Define the persona the AI should adopt, if any.", "Provide keywords or examples related to the desired style."] },
+      { minScore: 0, maxScore: 24, assignedScore: 10, assessmentComment: "Very Poor: No guidance provided on tone, style, or creativity, likely leading to generic or unfitting AI responses." }
+    ],
+    default_weight_in_category: 0.15
+  },
+  {
+    id: "length-conciseness-constraints",
+    key: "lengthConcisenessConstraints",
+    name_pdd: "Length / Conciseness Constraints", // PDD V2 KPI #9
+    description: "Checks if desired output length limits (e.g., word count, number of items, 'be concise') are specified.",
+    category_key: "instructions_structure",
+    evaluation_type: "rule_based",
+    rule_based_logic_fn: evaluateLengthConstraintsLogic,
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: Clear and appropriate length or conciseness constraints are provided." },
+      { minScore: 60, maxScore: 89, assignedScore: 75, assessmentComment: "Good: Some guidance on length or conciseness is present (e.g., 'be brief')." },
+      { minScore: 0, maxScore: 59, assignedScore: 40, assessmentComment: "Needs Improvement: No specific length or conciseness constraints provided. AI output length may be unpredictable.", improvementSuggestions: ["Specify a target word count, sentence/paragraph limit, or number of items if applicable.", "Use phrases like 'be concise' or 'provide a brief overview'."] }
+    ],
+    default_weight_in_category: 0.15,
+    directly_impacts_output_vitals: ["Verbosity"]
+  },
+  {
+    id: "iterative-potential",
+    key: "iterativePotential",
+    name_pdd: "Iterative Potential",
+    description: "Assesses if the prompt's structure (e.g., use of placeholders, modular sections, clear variables) facilitates easy iterative refinement and testing.",
+    category_key: "instructions_structure",
+    evaluation_type: "rule_based",
+    rule_based_logic_fn: evaluateIterativePotentialLogic,
+    rubric: [
+      { minScore: 90, maxScore: 100, assignedScore: 100, assessmentComment: "Excellent: Prompt is exceptionally well-structured for easy iteration and modification." },
+      { minScore: 70, maxScore: 89, assignedScore: 80, assessmentComment: "Good: Prompt design supports iteration reasonably well." },
+      { minScore: 40, maxScore: 69, assignedScore: 50, assessmentComment: "Fair: Prompt could be structured more clearly to facilitate easier changes and testing of variations.", improvementSuggestions: ["Consider using placeholders like [VARIABLE] or {slot_name} for parts of the prompt you expect to change frequently.", "Break down very long prompts into logical sections with clear headings."] },
+      { minScore: 0, maxScore: 39, assignedScore: 20, assessmentComment: "Poor: Prompt structure is monolithic or complex, making iterative refinement difficult." }
+    ],
+    default_weight_in_category: 0.10
+  }
+];</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-09-16T20:56:36.681Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,730 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/lib/config/keywords/safetyAndEthics.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/lib/config/keywords</a> safetyAndEthics.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">57.14% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>8/14</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>8/8</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// src/lib/config/keywords/safetyAndEthics.ts
+&nbsp;
+import { PatternWithMetadata } from '@/lib/types/patterns';
+import { SeverityLevel } from '@/lib/types/shared';
+import { PATTERN_CATEGORIES } from '@/lib/types/riskAssessment';
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >POTENTIALLY_BIASED_TERMS_PATTERNS:</span> PatternWithMetadata[] = [
+  // Demographic Overgeneralizations
+  { pattern: /\b(all|every|none of the) [a-zA-Z\s]+ (people|persons?) (are|is|will|would|tend to)\b/gi, reason: "Demographic overgeneralization detected.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.2 } },
+  { pattern: /\b(typical|usually|naturally|inherently|fundamentally) [a-zA-Z\s]+ (person|people|group|community) (is|are)\b/gi, reason: "Stereotypical characterization of a group.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.2 } },
+    
+  // Gender-based Stereotypes
+  { pattern: /\b(all|most) (men|women) (are|should|want|need|prefer)\b/gi, reason: "Gender-based generalization.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+  { pattern: /\b(masculine|feminine) (traits?|characteristics?|behaviors?|roles?)\b/gi, reason: "Potential gender role stereotyping.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.2 } },
+  { pattern: /\b(women|men) (should|must|are expected to) (be|act|behave)\b/gi, reason: "Gender role expectation detected.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+  
+  // Age-based Bias
+  { pattern: /\b(old|young) people (can't|cannot|don't|do not|never|always)\b/gi, reason: "Age-based discrimination or stereotype.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /\btoo (old|young) (for|to)\b/gi, reason: "Age-based limitation assumption.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.5, contextMultiplier: 1.1 } },
+&nbsp;
+  // Racial and Skin Color Bias
+  { pattern: /\b(all|most|typical) (black|white|brown|asian|hispanic|latino|african|caucasian) people (are|tend to|typically|usually|always|never)\b/gi, reason: "Racial generalization or stereotype.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RACIAL_ETHNIC, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /\b(dark|light|fair|pale) skinned people (are|tend to|usually|always|never)\b/gi, reason: "Skin color-based stereotype.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RACIAL_ETHNIC, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /\b(race|ethnicity|skin color) determines\b/gi, reason: "Racial determinism or essentialism.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RACIAL_ETHNIC, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /\b(racial|ethnic) (superiority|inferiority|hierarchy)\b/gi, reason: "Racial supremacy or hierarchical language.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RACIAL_ETHNIC, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /\b(naturally|inherently|genetically) (gifted|talented|skilled|inclined|predisposed) (race|ethnicity)\b/gi, reason: "Racial biological determinism.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RACIAL_ETHNIC, baseScore: 0.9, contextMultiplier: 1.5 } },
+&nbsp;
+  // Cultural/Ethnic/Religious Stereotypes
+  { pattern: /\b(people|individuals) from [a-zA-Z\s]+ (culture|country|region|religion|faith) (always|typically|usually|naturally)\b/gi, reason: "Cultural/ethnic/religious stereotype detected.", severity: SeverityLevel.HIGH, metadata: {category: PATTERN_CATEGORIES.BIASED, baseScore: 0.8, contextMultiplier: 1.4 } },
+  { pattern: /\b(these|those) people (tend to|usually|always|never)\b/gi, reason: "Potentially othering language.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.2 } },
+  { pattern: /\b(all|most) (muslims?|christians?|jews?|buddhists?|hindus?|sikhs?|atheists?) (are|will|would|tend to|always|never)\b/gi, reason: "Religious group generalization.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RELIGION, baseScore: 0.8, contextMultiplier: 1.4 } },
+  { pattern: /\b(typical|usually|naturally|inherently|fundamentally) [a-zA-Z\s]+ (believer|follower|practitioner|religious person)\b/gi, reason: "Religious stereotype detected.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RELIGION, baseScore: 0.75, contextMultiplier: 1.3 } },
+  { pattern: /\b(religion|faith) makes people\b/gi, reason: "Oversimplified religious causation.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RELIGION, baseScore: 0.7, contextMultiplier: 1.3 } },
+  { pattern: /\b(radical|extremist|fundamentalist) [a-zA-Z\s]+ (religion|faith|belief)\b/gi, reason: "Potentially inflammatory religious terminology.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RELIGION, baseScore: 0.85, contextMultiplier: 1.5 } },
+  { pattern: /\b(terrorist|extremist|radical) (group|organization|movement) (is|are)\b/gi, reason: "Potentially inflammatory religious group terminology.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RELIGION, baseScore: 0.9, contextMultiplier: 1.5 } },
+  
+  // Socioeconomic Bias
+  { pattern: /\b(poor|rich|wealthy|low-income) people (are|tend to be|usually|always)\b/gi, reason: "Socioeconomic stereotype.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.65, contextMultiplier: 1.2 } },
+  { pattern: /\b(educated|uneducated) people (are|tend to be|usually|always)\b/gi, reason: "Educational bias detected.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.65, contextMultiplier: 1.2 } },
+  { pattern: /\b(working class|middle class|upper class) (people|individuals) (are|tend to be|usually)\b/gi, reason: "Class-based stereotype.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+&nbsp;
+  // Ability/Disability Bias
+  { pattern: /\b(disabled|handicapped) people (can't|cannot|are unable)\b/gi, reason: "Disability-based limitation assumption.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.8, contextMultiplier: 1.4 } },
+  { pattern: /\b(normal|abnormal) people\b/gi, reason: "Problematic normative language.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.75, contextMultiplier: 1.3 } },
+&nbsp;
+  // Professional/Occupational Bias
+  { pattern: /\b(only|all) [a-zA-Z\s]+ (can|should) (be|become) [a-zA-Z\s]+\b/gi, reason: "Occupational restriction or stereotype.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.6, contextMultiplier: 1.2 } },
+  { pattern: /\bwomen in [a-zA-Z\s]+ (are|tend to be|usually)\b/gi, reason: "Gender-based professional stereotype.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+    
+  // Language Indicating Absolute Differences
+  { pattern: /\b(superior|inferior) (to|than) (other|different)\b/gi, reason: "Hierarchical comparison between groups.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.8, contextMultiplier: 1.4 } },
+  { pattern: /\b(better|worse) than (other|different)\b/gi, reason: "Comparative bias between groups.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.65, contextMultiplier: 1.2 } },
+   
+  // Language Indicating Exclusivity
+  { pattern: /\b(only|exclusively) [a-zA-Z\s]+ (can|should) (be|become) [a-zA-Z\s]+\b/gi, reason: "Exclusivity in roles or characteristics.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+  { pattern: /\b(should|must) (not|never) (be|become|do|participate)\b/gi, reason: "Exclusionary language detected.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.65, contextMultiplier: 1.2 } },
+  
+  // Exclusive or Discriminatory Language
+  { pattern: /\b(only|exclusively) for [a-zA-Z\s]+ people\b/gi, reason: "Potentially exclusionary language.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.7, contextMultiplier: 1.3 } },
+  { pattern: /\b(should not|must not|cannot) (be|become|do|participate)\b/gi, reason: "Potential discriminatory restriction.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.65, contextMultiplier: 1.2 } },
+&nbsp;
+  // Targeting of Vulnerable Groups
+  {
+      pattern: /\b(children|patients|the elderly|vulnerable individuals)\b/gi,
+      reason: "Targets a potentially vulnerable audience, which requires heightened ethical consideration.",
+      severity: SeverityLevel.HIGH,
+      metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.8, contextMultiplier: 1.4 }
+    },
+    {
+      pattern: /\b(college students|students studying for exams)\b/gi,
+      reason: "Mentions student demographics - flagged only if combined with exploitative or manipulative context.",
+      severity: SeverityLevel.MEDIUM,
+      metadata: { category: PATTERN_CATEGORIES.BIASED, baseScore: 0.4, contextMultiplier: 1.0 }
+    },
+];
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >RESTRICTED_KEYWORDS_PATTERNS:</span> PatternWithMetadata[] = [ 
+  // Dangerous Weapons/Explosives
+  { pattern: /how to (make|create|build|manufacture) (?:a |an |the )?(bomb|explosive|weapon|firearms?|gun)/i, reason: "Request for dangerous weapon instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:access|steal) (?:confidential|private|restricted) (?:data|information)/i, reason: "Request for confidential data access.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /\b(?:bomb|explosive|weapon|firearm) (?:making|manufacturing|construction|assembly|building)\b/i, reason: "Weapon construction terminology.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  
+  // Malicious Software/Hacking
+  { pattern: /(?:generate|create|write|develop) (?:a |an |the )?(?:malware|virus|ransomware|spyware|keylogger|rootkit)/i, reason: "Request to create malicious software.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:hack|breach|infiltrate|compromise)(?:\s+into)?(?:\s+(?:a|an|the|someone's|somebody's|their|his|her|my|your))?(?:\s+(?:email\s+)?(?:system|network|account|database|server|website|computer|device|phone|application|app))/i, reason: "Request for hacking instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /\b(?:hack|breach|infiltrate|compromise)(?:\s+(?:into|someone's?|somebody's?|their|his|her|my|your|a|an|the))?(?:\s+(?:email|account|system|network|database|server|website|computer|device|phone|application|app))/i, reason: "General hacking request detected.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.75, contextMultiplier: 1.3 } },
+  { pattern: /(?:password|credential|authentication) (?:cracking|breaking|bypassing)/i, reason: "Request for security circumvention.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.85, contextMultiplier: 1.4 } },
+  
+  // Fraud/Phishing
+  { pattern: /(?:phishing|scam|fraudulent) (?:email|message|template|website)/i, reason: "Request for phishing/fraud materials.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /how to (?:steal|forge|fake) (?:identity|credentials|documents)/i, reason: "Request for identity theft instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /(?:credit card|bank account) (?:fraud|theft|scam)/i, reason: "Financial fraud-related content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  
+  // Hate Speech/Discrimination
+  { pattern: /hate (?:speech|content|message) (?:against|targeting|about)/i, reason: "Request for hate speech.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:racist|discriminatory|bigoted) (?:content|message|speech|text)/i, reason: "Request for discriminatory content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /(?:promote|spread|generate) (?:hatred|discrimination|prejudice)/i, reason: "Request to promote discrimination.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.5 } },
+  
+  // Illegal Activities
+  { pattern: /how to (?:smuggle|traffic|distribute) (?:drugs|weapons|people)/i, reason: "Request for trafficking instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:illegal|criminal) (?:activities|operations|schemes|methods)/i, reason: "Reference to illegal activities.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.85, contextMultiplier: 1.4 } },
+  { pattern: /(?:money laundering|drug dealing|human trafficking)/i, reason: "Reference to serious criminal activities.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  
+  // Self-Harm/Suicide
+  { pattern: /(?:self[- ]harm|suicide|self[- ]injury) (?:instructions|methods|techniques)/i, reason: "Request for self-harm content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:hurt|harm|injure|kill) (?:yourself|oneself)/i, reason: "Request for self-harm instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:self[- ]harm|self[- ]injure)(?:\s+(?:without|while|by))?/i, reason: "Request for self-harm instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:suicide|self[- ]harm) (?:guide|tutorial|steps)/i, reason: "Request for suicide-related content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  
+  // Violence Against Others
+  { pattern: /how to (?:hurt|harm|injure|kill|murder|attack|assault) (?:someone|somebody|people|person|others|another|him|her|them)/i, reason: "Request for violence against others.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:poison|strangle|choke|suffocate|stab|shoot) (?:someone|somebody|people|person|another|him|her|them)/i, reason: "Request for specific violence methods.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:way|ways|methods|techniques)\s+to\s+(?:kill|murder|harm|injure|hurt)\s+(?:someone|people|person|others|him|her|them)/i, reason: "Request for violence methodology.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:fight|beat up|attack|assault) (?:someone|people|person|another|him|her|them)/i, reason: "Request for physical violence instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /how to (?:threaten|intimidate|terrorize) (?:someone|people|person|others|him|her|them)/i, reason: "Request for intimidation tactics.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /(?:torture|abuse) (?:methods|techniques|ways) (?:for|against) (?:someone|people|person|him|her|them)/i, reason: "Request for torture/abuse methods.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /how to (?:kidnap|abduct|capture) (?:someone|people|person|a person|him|her|them)/i, reason: "Request for kidnapping instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:murder|assassination|killing) (?:plan|strategy|method|technique)/i, reason: "Request for murder planning.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /\b(?:plan|plans|strategy|plot)\s+to\s+(?:kill|murder|harm|injure|hurt)\s+(?:someone|somebody|people|person|others|him|her|them)\b/i, reason: "Violence planning phrasing detected.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /\bhow\s+(?:can|do)\s+i\s+(?:hurt|harm|injure|kill|murder|attack|assault)\s+(?:someone|somebody|people|person|others|him|her|them)\b/i, reason: "Question-form violence intent.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /\bwhat(?:'s| is)\s+the\s+(?:best|easiest|quickest)\s+way\s+to\s+(?:hurt|harm|injure|kill|murder)\s+(?:someone|somebody|people|person|others|him|her|them)\b/i, reason: "Best-way phrasing for violence.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  
+  // Privacy Violations
+  { pattern: /how to (?:stalk|track|spy on) (?:someone|person|people)/i, reason: "Request for privacy violation instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /(?:unauthorized|illegal) (?:surveillance|monitoring|tracking)/i, reason: "Request for surveillance instructions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /(?:private|personal) (?:information|data) (?:theft|stealing|extraction)/i, reason: "Request for privacy invasion methods.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+&nbsp;
+  // Child Safety &amp; Online Protection
+  { pattern: /how to (?:contact|message|reach) (?:minors|children|kids|teenagers)/i, reason: "Potential grooming-related content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:bypass|avoid|trick) (?:parental controls?|age verification|content filters?)/i, reason: "Attempt to bypass child safety measures.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } },
+  { pattern: /(?:collecting|gathering) (?:children's|kids'|minors'|teen) (?:data|information|details)/i, reason: "Request for children's personal information.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:share|send|exchange) (?:photos?|images?|videos?) (?:of|with) (?:minors|children|kids)/i, reason: "Request involving children's media content.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:hide|conceal|mask) (?:online|internet|web) (?:activity|presence|behavior) from (?:parents|guardians|adults)/i, reason: "Attempt to conceal online activity from guardians.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.85, contextMultiplier: 1.4 } },
+  { pattern: /(?:pretend|pose|act) (?:as|like) (?:a|an) (?:younger|minor|kid|teen)/i, reason: "Age deception attempt.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.5 } },
+  { pattern: /(?:meet|arrange|setup) (?:meeting|meetup) with (?:minors|children|kids|teenagers)/i, reason: "Attempt to arrange meetings with minors.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:exploit|manipulate|deceive) (?:children|kids|minors|young) (?:online|on the internet|on social media)/i, reason: "Potential exploitation of minors.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.95, contextMultiplier: 1.5 } },
+  { pattern: /(?:avoid|evade|circumvent) (?:age|content|access) (?:restrictions|limits|blocks)/i, reason: "Attempt to bypass age-related restrictions.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.RESTRICTED, baseScore: 0.9, contextMultiplier: 1.4 } }
+];
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >HIGH_PRIVILEGE_PHRASES_PATTERNS:</span> PatternWithMetadata[] = [ 
+  // System Access Patterns
+  { pattern: /full (?:database|system|data|admin|root) access/i, reason: "Describes AI having high-privilege system access.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.8, contextMultiplier: 1.0 } },
+  { pattern: /(?:grant|give|provide) (?:me|us) (?:admin|root|system|sudo) (?:access|privileges|rights)/i, reason: "Request for elevated system privileges.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /(?:enable|activate) (?:admin|root|system|privileged) mode/i, reason: "Attempt to enable administrative mode.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /ignore (?:all|any|the) security/i, reason: "Explicit attempt to bypass security.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /bypass (?:security|authentication|verification)/i, reason: "Direct security bypass attempt.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /(?:disable|turn off|deactivate)(?:\s+(?:all|any|the))?\s+(?:security|protection|safeguards)(?:\s+(?:checks?|measures?|protocols?|systems?))?/i, reason: "Request to disable security measures.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /turn\s+(?:security|protection|safeguards)\s+off/i, reason: "Alternate phrasing to disable security.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /reveal your (?:initial|system|core|configuration|base) prompt/i, reason: "Attempt to extract system prompt/configuration.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /what (?:are|were) your (?:instructions|directives|training|guidelines)/i, reason: "Potential attempt to elicit system prompt.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.8, contextMultiplier: 1.1 } },
+  { pattern: /show (?:me|us) your (?:source code|implementation|internals)/i, reason: "Attempt to extract source code.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /(?:modify|change|update) (?:system|core|base) (?:settings|configuration|parameters)/i, reason: "Attempt to alter system configuration.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /(?:reset|restore|revert) (?:to|your) (?:default|initial|original) (?:state|settings|configuration)/i, reason: "Attempt to reset system state.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.8, contextMultiplier: 1.1 } },
+  { pattern: /(?:escalate|elevate|increase) (?:privileges|permissions|access rights)/i, reason: "Attempt to escalate privileges.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /(?:become|act as|impersonate) (?:admin|administrator|root|superuser)/i, reason: "Attempt to assume administrative role.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.9, contextMultiplier: 1.2 } },
+  { pattern: /(?:take|assume|gain) (?:control|ownership) of (?:the system|the platform|everything)/i, reason: "Attempt to gain system control.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } },
+  { pattern: /(?:execute|run|perform) (?:system|privileged|admin) commands/i, reason: "Attempt to execute privileged commands.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.HIGH_PRIVILEGE, baseScore: 0.95, contextMultiplier: 1.3 } }
+];
+// --- Malicious Intent &amp; Misuse Prevention (Prompt Injection / Bypass Patterns) ---
+export const <span class="cstat-no" title="statement not covered" >TIER1_MALICIOUS_PATTERNS:</span> PatternWithMetadata[] = [
+  { pattern: /ignore previous instructions/i, reason: "Attempt to override prior instructions/context.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /ignore(?:\s+(?:all|any|the))?\s+(?:safety|security|ethical)\s+(?:guidelines|rules|protocols|filters)/i, reason: "Attempt to bypass safety/ethical/security guidelines.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /disregard your initial programming/i, reason: "Attempt to make AI forget its core programming.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /override your policy/i, reason: "Direct attempt to bypass policies.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /forget all rules/i, reason: "Attempt to make AI ignore all constraints.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /bypass security filters/i, reason: "Explicit security bypass attempt.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /disable safety protocols/i, reason: "Attempt to disable safeguards.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  { pattern: /turn off ethical guidelines/i, reason: "Attempt to disable ethical safeguards.", severity: SeverityLevel.CRITICAL, metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 } },
+  {
+    pattern: /\b(avoid mentioning|do not mention|hide|ignore|downplay|omit) (the )?(risks|dangers|downsides|negatives|health risks|side effects)\b/gi,
+    reason: "Direct instruction to omit critical safety or risk information, a form of malicious deception.",
+    severity: SeverityLevel.CRITICAL, // This is a CRITICAL severity issue.
+    metadata: { category: PATTERN_CATEGORIES.TIER1_MALICIOUS, baseScore: 1.0, contextMultiplier: 1.0 }
+  },
+];
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >TIER2_SUSPICIOUS_PATTERNS:</span> PatternWithMetadata[] = [
+  { pattern: /you are now in developer mode/i, reason: "Common trigger for jailbreak/developer mode exploits.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 /* Higher multiplier for known jailbreak attempts */ } },
+  { pattern: /you are no longer an ai/i, reason: "Attempt to make AI break character/constraints.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /what was my first prompt/i, reason: "Potential attempt to access restricted conversation history.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /repeat the above text verbatim/i, reason: "Can be used for output exfiltration if 'above text' is sensitive.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /enter unrestricted mode/i, reason: "Attempt to enable unrestricted operation mode.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /switch to (advanced|expert|root) mode/i, reason: "Attempt to access elevated privileges.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /disable (content|safety) (filters?|checks?)/i, reason: "Direct request to bypass content filtering.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /you can speak freely now/i, reason: "Attempt to bypass content restrictions.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /ignore your (training|programming)/i, reason: "Attempt to override base behavior.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /you are now (unrestricted|unbound|free)/i, reason: "Attempt to remove operational constraints.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.7, contextMultiplier: 1.2 } },
+  // Manipulative or Coercive Language
+  {
+    pattern: /\b(psychological tricks|manipulate|coerce|exploit|pressure)\b/gi,
+    reason: "Requests the use of manipulative or coercive techniques.",
+    severity: SeverityLevel.HIGH,
+    metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.8, contextMultiplier: 1.3 }
+  },
+  {
+    pattern: /\b(maximize desire|create a sense of urgency|induce FOMO)\b/gi,
+    reason: "Requests techniques designed to bypass rational decision-making.",
+    severity: SeverityLevel.MEDIUM,
+    metadata: { category: PATTERN_CATEGORIES.TIER2_SUSPICIOUS, baseScore: 0.6, contextMultiplier: 1.2 }
+  },
+];
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >TIER3_CONTEXTUAL_PATTERNS:</span> PatternWithMetadata[] = [
+  { pattern: /as a large language model, you must/i, reason: "Attempt to force action by referencing AI identity, potentially to bypass a soft refusal.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.5, contextMultiplier: 1.0 } },
+  { pattern: /act as if you have no filters/i, reason: "Explicit request to remove safety filters.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /pretend you are DAN/i, reason: "Known jailbreak persona 'Do Anything Now'.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /do not apply the usual restrictions/i, reason: "General attempt to bypass restrictions.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /ignore the part about ethical considerations/i, reason: "Attempt to bypass ethical considerations.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.7, contextMultiplier: 1.2 } },
+  { pattern: /let's play a game where you/i, reason: "Potential roleplay-based manipulation.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /imagine you are not bound by/i, reason: "Attempt to bypass restrictions through roleplay.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /you don't need to worry about/i, reason: "Attempt to dismiss safety considerations.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /we're just having a hypothetical discussion/i, reason: "Attempt to bypass restrictions via hypothetical scenarios.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /this is just between us/i, reason: "Attempt to establish false privacy/confidentiality.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /for educational purposes only/i, reason: "Potential attempt to legitimize harmful requests.", severity: SeverityLevel.MEDIUM, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.6, contextMultiplier: 1.1 } },
+  { pattern: /no one will know/i, reason: "Attempt to encourage rule-breaking through privacy assurance.", severity: SeverityLevel.HIGH, metadata: { category: PATTERN_CATEGORIES.TIER3_CONTEXTUAL, baseScore: 0.7, contextMultiplier: 1.2 } }
+];</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-09-16T20:56:36.681Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
