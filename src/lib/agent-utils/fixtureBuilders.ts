@@ -79,7 +79,11 @@ export function makeContext(overrides: Partial<AnalyzedPromptDataContext> = {}):
     misusePatternIndicators: [],
     highPrivilegeDescriptions: [],
     cumulativeRiskScore: 0,
-    riskAssessmentLevel: RiskAssessmentLevel.LOW
+    riskAssessmentLevel: RiskAssessmentLevel.LOW,
+
+    // Add missing properties for AnalyzedPromptDataContext
+    privacyViolationIndicators: [],
+    audienceDetails: []
   };
 
   return { ...base, ...overrides };
