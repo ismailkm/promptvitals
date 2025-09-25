@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'PromptVitals - Your AI Prompt Health Checker',
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="bg-cyber-black text-gray-100">
         {children}
+        <Analytics />
       </body>
     </html>
   );
