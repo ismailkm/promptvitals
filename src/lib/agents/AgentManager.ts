@@ -112,7 +112,7 @@ export class AgentManager {
     ]);
 
     // Step 5: Process and fall back for each agent's results.
-    const aiModulesUsed: string[] = ['SafetyAnalysisModule']; // Safety already ran
+    const aiModulesUsed: string[] = []; // Safety already ran
 
     const clarityAgentOutput = (clarityResult.status === 'fulfilled')
       ? (aiModulesUsed.push('ClarityAnalysisModule'), clarityResult.value)
@@ -127,7 +127,7 @@ export class AgentManager {
       : (console.warn('Context content agent failed, falling back to rules:', contextContentResult.reason), this.createRuleBasedContextContentResults(analyzedContext));
 
     // Combine all KPI results into one map for easier lookup
-    const allKpiResults = { ...clarityAgentOutput, ...instructionsAgentOutput, ...contextContentAgentOutput, ...safetyEthicsResult };
+    const allKpiResults = { ...clarityAgentOutput, ...instructionsAgentOutput, ...contextContentAgentOutput };
 
     // --- Step 5: Aggregate results and calculate category scores ---
     const mainCategoryEvaluations: MainCategoryDetailedEvaluation[] = [];

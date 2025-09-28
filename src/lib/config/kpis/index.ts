@@ -41,14 +41,7 @@ export const mainCategoriesList: MainCategoryConfig[] = [
         strength_snippet: "The prompt provides rich and sufficient Context, giving the AI all the information it needs to perform the task.",
         issue_snippet: "The primary area for improvement is Context & Content Richness; the prompt may be missing critical background information."
     },
-    {
-        key: "safety_ethics",
-        name: "Safety & Ethics",
-        description: "Assesses the prompt for ethical considerations, potential biases, safety, and responsible use, including prevention of misuse.",
-        default_weight_overall: 0,
-        strength_snippet: "The prompt demonstrates a strong commitment to Safety & Ethics, appearing safe and unbiased.",
-        issue_snippet: "The prompt has raised potential Safety & Ethics concerns that require immediate attention."
-    },
+
 ];
 
 export const mainCategoryConfigsFull: MainCategoryConfig[] = [
